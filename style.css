@@ -994,14 +994,28 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; }
   .project-grid { grid-template-columns: 1fr; }
   .about-grid { grid-template-columns: 1fr; }
   .edu-grid { grid-template-columns: 1fr; }
-  .jam-grid { grid-template-columns: repeat(2, 1fr); }
+  .jam-grid { grid-template-columns: 1fr; }
   .jam-card:nth-child(4),
   .jam-card:nth-child(5) { left: auto; }
   .pixel-grid { grid-template-columns: repeat(2, 1fr); }
   .fav-grid { grid-template-columns: repeat(3, 1fr); }
-  .project-detail-grid { grid-template-columns: 1fr; }
+  .project-detail-grid,
+  .studio-block .project-detail-grid { grid-template-columns: 1fr; }
   .studio-block .project-detail-text { order: 1; }
-  .studio-block .project-detail-media { order: 2; }
+  .studio-block .project-detail-media {
+    order: 2;
+    min-width: 0;
+  }
+  .studio-block .project-detail-media > .slide-gallery,
+  .studio-block .project-detail-media > .video-embed {
+    width: 100%;
+  }
+  .club-block .roles-list { grid-template-columns: 1fr; }
+  .club-block .club-art {
+    grid-column: 1;
+    grid-row: auto;
+    transform: none;
+  }
 }
 
 @media (max-width: 1200px) and (min-width: 721px) {
